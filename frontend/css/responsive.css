@@ -1,0 +1,9 @@
+@media (max-width: 768px) {
+    .table {
+        min-width: 700px;
+    }
+
+    .content-card {
+        padding: 18px;
+    }
+}

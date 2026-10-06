@@ -1,0 +1,180 @@
+:root {
+    --primary: #4f46e5;
+    --primary-dark: #3730a3;
+    --secondary: #06b6d4;
+    --success: #16a34a;
+    --warning: #f59e0b;
+    --danger: #dc2626;
+    --dark: #111827;
+    --light: #f8fafc;
+    --border: #e5e7eb;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: white !important;
+}
+
+.hero {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #4f46e5, #06b6d4);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.hero p {
+    font-size: 1.15rem;
+}
+
+.feature-card,
+.stat-card,
+.content-card {
+    background: white;
+    border-radius: 15px;
+    border: 1px solid var(--border);
+    box-shadow: 0 5px 20px rgba(0,0,0,.05);
+}
+
+.feature-card {
+    padding: 25px;
+    height: 100%;
+}
+
+.feature-icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.stat-card {
+    padding: 22px;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.page-header {
+    margin-bottom: 25px;
+}
+
+.content-card {
+    padding: 25px;
+}
+
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #eef2ff, #ecfeff);
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 450px;
+    background: white;
+    border-radius: 18px;
+    padding: 35px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.1);
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.progress {
+    height: 10px;
+    border-radius: 10px;
+}
+
+.task-card {
+    border-left: 5px solid var(--primary);
+}
+
+.priority-high {
+    border-left-color: var(--danger);
+}
+
+.priority-medium {
+    border-left-color: var(--warning);
+}
+
+.priority-low {
+    border-left-color: var(--success);
+}
+
+footer {
+    background: #111827;
+    color: white;
+    padding: 25px 0;
+    margin-top: 60px;
+}
+
+.card-hover {
+    transition: .2s;
+}
+
+.card-hover:hover {
+    transform: translateY(-3px);
+}
+
+.empty-state {
+    text-align: center;
+    padding: 45px 20px;
+    color: #6b7280;
+}
+
+.dashboard-title {
+    font-weight: 700;
+}
+
+.quick-action {
+    text-decoration: none;
+}
+
+.chart-box {
+    position: relative;
+    height: 320px;
+}
+
+.badge {
+    font-weight: 500;
+}
+
+.form-label {
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.1rem;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 60px 0;
+    }
+
+    .auth-card {
+        margin: 20px;
+        padding: 25px;
+    }
+}

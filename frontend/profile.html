@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Profile - StudyPlanner</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="dashboard.html">?? StudyPlanner</a>
+
+        <div class="d-flex flex-wrap gap-2">
+            <a href="dashboard.html" class="btn btn-outline-light btn-sm">Dashboard</a>
+            <a href="subjects.html" class="btn btn-outline-light btn-sm">Subjects</a>
+            <a href="topics.html" class="btn btn-outline-light btn-sm">Topics</a>
+            <a href="planner.html" class="btn btn-outline-light btn-sm">Planner</a>
+            <a href="profile.html" class="btn btn-outline-light btn-sm">Profile</a>
+            <button onclick="logout()" class="btn btn-danger btn-sm">Logout</button>
+        </div>
+    </div>
+</nav>
+
+<main class="container py-4">
+
+<div class="page-header">
+<h2>?? Profile</h2>
+<p class="text-muted">Manage your account information.</p>
+</div>
+
+<div id="message"></div>
+
+<div class="content-card">
+
+<form id="profileForm">
+
+<div class="mb-3">
+<label class="form-label">Full Name</label>
+<input id="profileName" class="form-control">
+</div>
+
+<div class="mb-3">
+<label class="form-label">Email</label>
+<input id="profileEmail" type="email" class="form-control">
+</div>
+
+<div class="mb-3">
+<label class="form-label">Daily Study Goal (Hours)</label>
+<input id="studyGoal" type="number" min="1" max="24"
+       class="form-control" value="3">
+</div>
+
+<button class="btn btn-primary">
+Save Profile
+</button>
+
+</form>
+
+<hr class="my-4">
+
+<button onclick="logout()" class="btn btn-danger">
+Logout
+</button>
+
+</div>
+
+</main>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/profile.js"></script>
+
+</body>
+</html>

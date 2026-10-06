@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard - StudyPlanner</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="dashboard.html">?? StudyPlanner</a>
+
+        <div>
+            <a href="profile.html" class="btn btn-outline-light me-2">Profile</a>
+            <button onclick="logout()" class="btn btn-danger">Logout</button>
+        </div>
+    </div>
+</nav>
+
+<main class="container py-4 dashboard-wrapper">
+
+    <div class="page-header">
+        <h2 class="dashboard-title" id="welcomeMessage">
+            Welcome!
+        </h2>
+        <p class="text-muted">
+            Here's your study overview.
+        </p>
+    </div>
+
+    <div class="row g-4 mb-4">
+
+        <div class="col-md-3">
+            <div class="stat-card">
+                <div class="text-muted">Overall Progress</div>
+                <div class="stat-number" id="overallProgress">0%</div>
+                <div class="progress mt-2">
+                    <div id="progressBar" class="progress-bar" style="width:0%"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="stat-card">
+                <div class="text-muted">Subjects</div>
+                <div class="stat-number" id="subjectCount">0</div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="stat-card">
+                <div class="text-muted">Pending Topics</div>
+                <div class="stat-number" id="pendingTopics">0</div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="stat-card">
+                <div class="text-muted">Study Hours</div>
+                <div class="stat-number" id="studyHours">0</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="content-card mb-4">
+        <h4>Quick Actions</h4>
+
+        <div class="row g-3 mt-2">
+
+            <div class="col-md-3">
+                <a href="subjects.html" class="btn btn-primary w-100">
+                    ?? Subjects
+                </a>
+            </div>
+
+            <div class="col-md-3">
+                <a href="topics.html" class="btn btn-primary w-100">
+                    ?? Topics
+                </a>
+            </div>
+
+            <div class="col-md-3">
+                <a href="exams.html" class="btn btn-primary w-100">
+                    ?? Exams
+                </a>
+            </div>
+
+            <div class="col-md-3">
+                <a href="planner.html" class="btn btn-success w-100">
+                    ?? Study Planner
+                </a>
+            </div>
+
+        </div>
+
+        <div class="row g-3 mt-1">
+
+            <div class="col-md-3">
+                <a href="assignments.html" class="btn btn-outline-primary w-100">
+                    ?? Assignments
+                </a>
+            </div>
+
+            <div class="col-md-3">
+                <a href="calendar.html" class="btn btn-outline-primary w-100">
+                    ?? Calendar
+                </a>
+            </div>
+
+            <div class="col-md-3">
+                <a href="progress.html" class="btn btn-outline-primary w-100">
+                    ?? Progress
+                </a>
+            </div>
+
+            <div class="col-md-3">
+                <a href="ai-plan.html" class="btn btn-outline-success w-100">
+                    ?? AI Plan
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row g-4">
+
+        <div class="col-md-6">
+            <div class="content-card">
+                <h4>Upcoming Exams</h4>
+                <div id="upcomingExams" class="mt-3">
+                    <div class="empty-state">No upcoming exams.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="content-card">
+                <h4>Upcoming Assignments</h4>
+                <div id="upcomingAssignments" class="mt-3">
+                    <div class="empty-state">No upcoming assignments.</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</main>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>

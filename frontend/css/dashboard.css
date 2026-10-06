@@ -1,0 +1,11 @@
+.dashboard-wrapper {
+    min-height: 80vh;
+}
+
+.stat-card {
+    transition: transform .2s;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+}
